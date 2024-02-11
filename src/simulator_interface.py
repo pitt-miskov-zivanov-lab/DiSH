@@ -9,8 +9,8 @@ import openpyxl
 import pandas as pd
 import numpy as np
 import logging
-from Simulation.Simulator_Python.simulator import Simulator
-from Visualization import visualization_interface as viz
+from simulator import Simulator
+import visualization_interface as viz
 
 def setup_and_create_rules(inputFilename, outputFilename, scenarioString='0'):
     """Create a model object, derive update rules, output to file(s).

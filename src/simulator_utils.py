@@ -4,9 +4,9 @@ import json
 import os
 import re
 import matplotlib.pyplot as plt
-from Simulation.Simulator_Python import simulator_interface as sim
-from Visualization import visualization_interface as viz
-from Translation.model import get_model, get_model_template, get_model_from_delphi
+import simulator_interface as sim
+import visualization_interface as viz
+from util import get_model, get_model_template, get_model_from_delphi
 import seaborn as sns
 from scipy import signal, interpolate
 from scipy.optimize import nnls

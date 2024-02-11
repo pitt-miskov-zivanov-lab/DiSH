@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from io import StringIO
 import logging
-from Translation.model import get_model, model_to_dict
+from util import get_model, model_to_dict
 from collections import deque
 import ast
 
