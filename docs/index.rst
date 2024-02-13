@@ -20,7 +20,7 @@ Contents
 
    Overview
    Installation
-   Function_Reference
    Tutorial
    Example
    Citation
+   Function_Reference
