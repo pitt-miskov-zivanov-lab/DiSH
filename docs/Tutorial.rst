@@ -1,7 +1,12 @@
-
-
+Tutorial
+========
+This is a tutorial for DiSH simulator.
+I/O
+---
+Input: 
+Output: Th
 Model Creation
-===================
+--------------
 
 All columns names
 --------------
@@ -75,35 +80,31 @@ Simulation Parameters
 ---------------------
 DiSH could interact with either `bash` command or Jupyter Notebook. Users could use either interface to setup their simulations, here we provide several parameters description:
 
-Schemes (default value: ra)
-~~~~~~~
-DiSH support various simulation schemes, which can be categarized simultaneous and randomly update.
-To check the descriptions of schemes, you could use:
+- Schemes (default value: ra):
+  DiSH support various simulation schemes, which can be categarized simultaneous and randomly update.
+  To check the descriptions of schemes, you could use:
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  python simulator_interface.py -h
+    python simulator_interface.py -h
 
 
-Run and Steps (default value: 100 and 1000)
-~~~~~~~~~~~~~
-DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
-To setup the runs and steps, please use following bash command:
+- Run and Steps (default value: 100 and 1000):
+  DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
+  To setup the runs and steps, please use following bash command:
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  python simulator_interface.py [model_filename] --runs [time] --steps [time period]
+    python simulator_interface.py [model_filename] --runs [time] --steps [time period]
 
-We also provide the [jupyter notebook] interface for visualization.
+  We also provide the [jupyter notebook] interface for visualization.
 
-Increment (default value: proportional to regulation scores)
-~~~~~~~~~
-DiSH simulator provides two types of increment, unit increment and proportional increment(default).
-If you want to set your increment as unit, please fill 0 in the column 'Increment'.
+- Increment (default value: proportional to regulation scores):
+  DiSH simulator provides two types of increment, unit increment and proportional increment(default).
+  If you want to set your increment as unit, please fill 0 in the column 'Increment'.
 
-Output Format (default value: 0)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The output of simulator is a text file of trace file, it includes the trace of every element at each run. 
+- Output Format (default value: 0):
+  The output of simulator is a text file of trace file, it includes the trace of every element at each run. 
 
 Normalize Output(default value: True)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
