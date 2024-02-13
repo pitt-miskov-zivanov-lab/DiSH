@@ -34,3 +34,14 @@ Simulation features
 - Compatible with deterministic and stochastic simulation schemes.
 - Seamless integration into existing workflows for interaction extraction, filtering, network assembly, model verification, and validation.
 
+Method
+====================
+
+The modeling approach for element behaviors in simulations, is departing from the conventional method of resetting values during updates. Instead, it introduces memory into the model, where an element's next state value is determined by its current state and the differential regulation score.
+Different timing behaviors and responses to regulation, including default, delayed, unbalancing, and spontaneous responses, are allowed.
+
+The default behavior involves adjusting an element's state value based on the regulation score.
+The delayed behavior is when an element x is selected for updating for the next t, its values is assigned to it in the time t+d which d is the delay.
+The balanced behavior is when an element has both positive and negative regulators.
+Any element in the model that possesses both positive and negative regulators can be assigned either positive unbalancing behavior or negative unbalancing behavior. These behaviors modify the default behavior by either incrementing or decrementing the element's value.
+The framework also considers other behaviors like unbalancing and spontaneous responses, accommodating scenarios where elements may change despite regulation balance or absence.
