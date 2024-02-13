@@ -5,21 +5,20 @@ This is a tutorial for DiSH simulator.
 I/O
 ---------
 Input includes: 
-- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`
+
+- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`_
 
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/input/Tcell_N5_PTEN4_bio.xlsx
 
-- simulation `setup`_
 
-.. _setup: 
-
-Simulation Setups
-------------------
+- :ref:`Simulation Setups`
 
 Output includes:
-- a .txt file containing all the trace of every element at each run, `see example`
+
+- a .txt file containing all the trace of every element at each run, `see example`_
 
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/output/trace.txt
+
 
 output file could export with different formats. Users could choose specific format before simulation.
 
@@ -119,7 +118,7 @@ Simulation Setups
 ---------------------
 DiSH could interact with either `bash` command or Jupyter Notebook. Users could use either interface to setup their simulations, here we provide several parameters description:
 
-- Schemes (default value: ra):
+- ``Schemes`` (default value: ra):
   DiSH support various simulation schemes, which can be categarized simultaneous and randomly update.
   To check the descriptions of schemes, you could use:
 
@@ -128,7 +127,7 @@ DiSH could interact with either `bash` command or Jupyter Notebook. Users could 
     python simulator_interface.py -h
 
 
-- Run and Steps (default value: 100 and 1000):
+- ``Run and Steps`` (default value: 100 and 1000):
   DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
   To setup the runs and steps, please use following bash command:
 
@@ -138,14 +137,14 @@ DiSH could interact with either `bash` command or Jupyter Notebook. Users could 
 
   We also provide the [jupyter notebook] interface for visualization.
 
-- Increment (default value: proportional to regulation scores):
+- ``Increment`` (default value: proportional to regulation scores):
   DiSH simulator provides two types of increment, unit increment and proportional increment(default).
   If you want to set your increment as unit, please fill 0 in the column 'Increment'.
 
-- Output Format (default value: 0):
+- ``Output Format`` (default value: 0):
   The output of simulator is a text file of trace file, it includes the trace of every element at each run. 
 
-- Normalize Output(default value: True):
+- ``Normalize Output``(default value: True):
   The level of trace could be either integers or float number from 0 to 1. 
 
 The model filename, output_trace_filename, and simulation scheme are required to provide by the users. Users could tune the above parameters by themselves as well. For example, this is a command for simulating a T cell model by setting 50 runs, 200 steps, simultaneously updating scheme.
