@@ -3,7 +3,7 @@ Tutorial
 This is a tutorial for DiSH simulator.
 
 I/O
----
+---------
 Input includes: 
 - a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`_
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/input/Tcell_N5_PTEN4_bio.xlsx
