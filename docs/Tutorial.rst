@@ -5,29 +5,39 @@ This is a tutorial for DiSH simulator.
 I/O
 ---------
 Input includes: 
-- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`_
+- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, 
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/input/Tcell_N5_PTEN4_bio.xlsx
-- simulation `setup`_
+- simulation
 .. _setup: 
 
 Simulation Setups
 ------------------
 
 Output includes:
-- a .txt file containing all the trace of every element at each run, `see example`_
+- a .txt file containing all the trace of every element at each run,
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/output/trace.txt
 
 output file could export with different formats. Users could choose specific format before simulation.
-.. csv-table:: Output Trace File Formats
+.. list-table:: Output Trace File Formats
   :widths: 20, 30
   :header-rows: 1
-  1, traces for all runs and frequency summary (default for sync)
-  2, traces for all runs in transpose format
-  3, trace file with frequency summary only (default for ra scheme)
-  4, model rules and truth tables
-  5, model rules
-  6, truth tables
-  7, event traces including elements updated at each step
+
+  * - # of format
+    - Description
+  * - 1
+    - traces for all runs and frequency summary (default for sync)
+  * - 2
+    - traces for all runs in transpose format
+  * - 3
+    - trace file with frequency summary only (default for ra scheme)
+  * - 4 
+    - model rules and truth tables
+  * - 5
+    - model rules
+  * - 6
+    - truth tables
+  * - 7
+    - event traces including elements updated at each step
 
 Model Creation
 --------------
