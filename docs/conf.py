@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'DiSH'
+copyright = '2024, Khaled Sayed, Miskov-Zivanov Lab (MeLoDy lab)'
+author = 'Khaled Sayed'
 
-release = '0.1'
-version = '0.1.0'
+release = '2024'
+version = 'Latest'
 
 # -- General configuration
 
