@@ -71,3 +71,32 @@ Valid types of elements include:
 - chemical
 - biological process
 
+Simulation Parameters
+---------------------
+
+Schemes
+~~~~~~~
+DiSH support various simulation schemes, which can be categarized simultaneous and randomly update.
+To check the descriptions of schemes, you could use:
+
+.. code-block:: bash
+
+  python simulator_interface.py -h
+
+
+run and steps
+~~~~~~~~~~~~~
+DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
+To setup the runs and steps, please use following bash command:
+
+.. code-block:: bash
+
+  python simulator_interface.py [model_filename] --runs [time] --steps [time period]
+
+We also provide the [jupyter notebook] interface for visualization.
+
+Increment
+~~~~~~~~~
+DiSH simulator provides two types of increment, unit increment and proportional increment(default).
+If you want to set your increment as unit, please fill 0 in the column 'Increment'.
+
