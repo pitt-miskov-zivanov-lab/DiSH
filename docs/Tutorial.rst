@@ -73,8 +73,9 @@ Valid types of elements include:
 
 Simulation Parameters
 ---------------------
+DiSH could interact with either `bash` command or Jupyter Notebook. Users could use either interface to setup their simulations, here we provide several parameters description:
 
-Schemes
+Schemes (default value: ra)
 ~~~~~~~
 DiSH support various simulation schemes, which can be categarized simultaneous and randomly update.
 To check the descriptions of schemes, you could use:
@@ -84,7 +85,7 @@ To check the descriptions of schemes, you could use:
   python simulator_interface.py -h
 
 
-run and steps
+Run and Steps (default value: 100 and 1000)
 ~~~~~~~~~~~~~
 DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
 To setup the runs and steps, please use following bash command:
@@ -95,8 +96,23 @@ To setup the runs and steps, please use following bash command:
 
 We also provide the [jupyter notebook] interface for visualization.
 
-Increment
+Increment (default value: proportional to regulation scores)
 ~~~~~~~~~
 DiSH simulator provides two types of increment, unit increment and proportional increment(default).
 If you want to set your increment as unit, please fill 0 in the column 'Increment'.
+
+Output Format (default value: 0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The output of simulator is a text file of trace file, it includes the trace of every element at each run. 
+
+Normalize Output(default value: True)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The level of trace could be either integers or float number from 0 to 1. 
+
+The model_filename, output_trace_filename, and simulation scheme are required to provide by the users. Users could tune the above parameters by themselves as well. For example, this is a command for simulating a T cell model by setting 50 runs, 200 steps, randomly updating scheme.
+
+.. code-block:: bash 
+
+  python simulator_interface.py [T cell model filename] --sim_scheme ra --runs 50 --steps 200
+
 
