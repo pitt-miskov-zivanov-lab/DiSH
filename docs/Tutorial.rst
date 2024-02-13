@@ -95,7 +95,7 @@ DiSH could interact with either `bash` command or Jupyter Notebook. Users could 
 
   .. code-block:: bash
 
-    python simulator_interface.py [model_filename] --runs [time] --steps [time period]
+    python simulator_interface.py [model_filename] [output trace file] --runs [time] --steps [time period]
 
   We also provide the [jupyter notebook] interface for visualization.
 
@@ -106,14 +106,13 @@ DiSH could interact with either `bash` command or Jupyter Notebook. Users could 
 - Output Format (default value: 0):
   The output of simulator is a text file of trace file, it includes the trace of every element at each run. 
 
-Normalize Output(default value: True)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The level of trace could be either integers or float number from 0 to 1. 
+- Normalize Output(default value: True):
+  The level of trace could be either integers or float number from 0 to 1. 
 
-The model_filename, output_trace_filename, and simulation scheme are required to provide by the users. Users could tune the above parameters by themselves as well. For example, this is a command for simulating a T cell model by setting 50 runs, 200 steps, randomly updating scheme.
+The model filename, output_trace_filename, and simulation scheme are required to provide by the users. Users could tune the above parameters by themselves as well. For example, this is a command for simulating a T cell model by setting 50 runs, 200 steps, simultaneously updating scheme.
 
 .. code-block:: bash 
 
-  python simulator_interface.py [T cell model filename] --sim_scheme ra --runs 50 --steps 200
+  python simulator_interface.py [T cell model filename] [output trace file] --sim_scheme sync --runs 50 --steps 200
 
 
