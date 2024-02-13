@@ -5,7 +5,7 @@ This is a tutorial for DiSH simulator.
 I/O
 ---------
 Input includes: 
-- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`_
+- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see example`
 
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/input/Tcell_N5_PTEN4_bio.xlsx
 
@@ -17,7 +17,7 @@ Simulation Setups
 ------------------
 
 Output includes:
-- a .txt file containing all the trace of every element at each run, `see example`_
+- a .txt file containing all the trace of every element at each run, `see example`
 
 .. _see example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/output/trace.txt
 
