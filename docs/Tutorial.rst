@@ -281,6 +281,9 @@ bash command
 
     python simulator_interface.py -h
 
+  .. image:: DiSH_schemes.png
+    :width: 600
+    :alt: Simulation Schemes
 
 - ``Run and Steps`` (default value: 100 and 1000):
   DiSH simulator could simulate multiple runs with fixed time period. Typically, simulation time depends on the setting of steps, runs, and model size.
