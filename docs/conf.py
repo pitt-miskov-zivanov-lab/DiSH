@@ -1,5 +1,9 @@
 # Configuration file for the Sphinx documentation builder.
 
+import os
+import sys
+import sphinx_copybutton
+
 # -- Project information
 
 project = 'DiSH'
