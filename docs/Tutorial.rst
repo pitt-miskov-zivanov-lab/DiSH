@@ -224,7 +224,7 @@ Optional Columns
 In simulation parameter, except for the required inputs `Regulation Rule`, `State List`, it also supports following optional parameter setting:
 
 .. list-table:: Simulation Parameters Settings
-    :widths: 15, 30, 8
+    :widths: 6, 15, 8
     :header-rows: 1
 
     * - Column Name
