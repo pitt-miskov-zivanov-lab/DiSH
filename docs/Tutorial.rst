@@ -1,6 +1,6 @@
 Tutorial
 ========
-This is a tutorial for DiSH simulator.
+This is a tutorial for DiSH simulator. The simulation typically involves in two steps, model creation and simulation setups. 
 
 I/O
 ---------
@@ -189,6 +189,7 @@ Create and Parse Rule
 ~~~~~~~~~~~~~~~~~~~~~~~~
 A regulation rule could represent multiple events and reactions, which are called groups, in a single line. all the events and reaction rules are connected with either a comma outside of brackets or a plus sign.
 For every group, they could be a single regulator or a expression consisted by the representation we listed above.
+
 For comma outside of the brackets, the representations could be used in group are:
 
 - binary logical AND(,)
@@ -207,7 +208,7 @@ For plus sign connector, the usable representations are:
 - Highest-value regulator '^'
 
 DiSH recursively parses the regulation rule with depth-first searching.
-The mixed representation between logical and arithmetic expression is not allowed, for example, (A,B)+C is not invalid, since regulator or regulatory subexpression should be separated by either `+` or `comma`.
+The mixed representation between logical and arithmetic expression is not allowed, for example, (A,B)+C is invalid, since regulator or regulatory subexpression should be separated by either `+` or `comma`.
 Instead, users could use truth table to get their desired functions. We also provide the `example <https://github.com/pitt-miskov-zivanov-lab/DiSH/tree/main/example/input>`_ for this.
 
 
@@ -340,7 +341,7 @@ make your setups for simulation:
     output_basename = os.path.join(output_path, 'example_traces_test')
     scenarios_sorted = [str(x) for x in scenarios]
 
-simulate the dynamics:
+Finally, your simulation are good to go! Summarize the setups in the function and run your script!:
 
 .. code-block:: Python
 
