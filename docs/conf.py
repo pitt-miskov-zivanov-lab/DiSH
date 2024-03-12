@@ -7,7 +7,7 @@ import sphinx_copybutton
 # -- Project information
 
 project = 'DiSH'
-copyright = '2024, Khaled Sayed, Miskov-Zivanov Lab (MeLoDy lab)'
+copyright = '2024, Miskov-Zivanov Lab (MeLoDy lab)'
 author = 'Khaled Sayed'
 
 release = '2024'
