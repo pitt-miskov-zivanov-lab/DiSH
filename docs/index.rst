@@ -1,10 +1,9 @@
 Welcome to DiSH2.0 documentation!
 ===================================
 
-**DiSH** is a Python tool for simulating hybrid bio-model.
+**DiSH** is a Python tool for simulating hybrid models.
 
-Check out the :doc:`Overview` section for further information, including
-how to :doc:`Installation` the project.
+Read more in the :doc:`Overview` section or go directly to the :doc:`Installation` instructions.
 
 .. note::
 
