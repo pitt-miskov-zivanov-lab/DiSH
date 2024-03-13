@@ -2,7 +2,7 @@
 
 import os
 import sys
-import sphinx_copybutton
+# import sphinx_copybutton
 
 # -- Project information
 
