@@ -1,26 +1,26 @@
 Tutorial
 ========
-This is a tutorial for DiSH simulator. The simulation typically involves in two steps, model creation and simulation setups.
+This is a tutorial for DiSH simulator. 
 
-I/O
----------
-Input includes:
+DiSH inputs and outputs
+-----------------------
+Inputs:
 
-- a .xlsx file containing the model to simulate, in the BioRECIPES tabular format, `see input example`_
+- A model file in the BioRECIPE tabular format (.xlsx), `see input example`_
 
 .. _see input example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/input/Tcell_N5_PTEN4_bio.xlsx
 
 
 - Simulation `setups <https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/docs/Tutorial.rst>`_
 
-Output includes:
+Output:
 
 - a .txt file containing all the trace of every element at each run, `see output example`_
 
 .. _see output example: https://github.com/pitt-miskov-zivanov-lab/DiSH/blob/main/example/output/trace.txt
 
 
-output file could export with different formats. Users could choose specific format before simulation.
+Output file can be exported in different formats. Users could choose specific format before simulation.
 
 .. list-table:: Output Trace File Formats
   :widths: 10, 30
@@ -43,25 +43,15 @@ output file could export with different formats. Users could choose specific for
   * - 7
     - event traces including elements updated at each step
 
-Model Creation
---------------
+Executable models
+-----------------
 
-DiSH supports BioRECIPE model file that includes element, regulation, and DiSH simulation parameters parts. For element and regulation parts, please check `BioRECIPE doc`_ for more information.
-The model contains the following required elements:
+DiSH supports BioRECIPE tabular format for executable models, which is an element-based format where each model element is assigned a row in the table and all attribute values associated with that element are included in that row. The three groups of attributes are Element attributes, Regulation attributes, and Simulation parameters. Please refer to the `BioRECIPE documentation<https://melody-biorecipe.readthedocs.io/en/latest/model_representation.html>`_ for detailed information about model attributes and their allowed values. 
 
-.. _BioRECIPE doc: https://melody-biorecipe.readthedocs.io/en/latest/model_representation.html
-
-- Variable
-- Positive Regulation Rule
-- Negative Regulation Rule
-- State List
-- Element Name
-- Element IDs
-- Element Type
 
 Regulation Rule
 ~~~~~~~~~~~~~~~~~~~
-The level of elements are all updated by corresponding regulation rules, users should define the regulation rule in the `Positive Regulation Rule` and `Negative Regulation Rule` column.
+Element states are updated following their update functions, which consist of positive and negative regulation parts, referred in the BioRECIPE representation format as Positive Regulation Rule and Negative Regulation Rule, users should define the regulation rule in the `Positive Regulation Rule` and `Negative Regulation Rule` columns.
 Regulation rule are consisted of `variable name` and `operator`, every `variable name` in the regulation rule is the level of the element.
 DiSH2.0 offers several operators for representation of `Regulation Rule`.
 
@@ -317,21 +307,22 @@ The model filename, output_trace_filename, and simulation scheme are required to
 Python code
 ~~~~~~~~~~~~~
 Except for terminal interface, we also provide function for your script.
-import simulator interface:
+
+Import simulator interface:
 
 .. code-block:: Python
 
     import os
     import simulator_interface as sim
 
-input your BioRECIPE model filename and output directory
+Input your BioRECIPE model filename and output directory
 
 .. code-block:: Python
 
     model = 'example/input/model.xlsx'
     output_dir = 'example/output/'
 
-make your setups for simulation:
+Make your setups for simulation:
 
 .. code-block:: Python
 
@@ -347,7 +338,7 @@ make your setups for simulation:
     output_basename = os.path.join(output_path, 'example_traces_test')
     scenarios_sorted = [str(x) for x in scenarios]
 
-Finally, your simulation are good to go! Summarize the setups in the function and run your script!:
+Finally, your simulation is good to go! Summarize the setups in the function and run your script!:
 
 .. code-block:: Python
 
