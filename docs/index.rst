@@ -16,7 +16,6 @@ Contents
 
    Overview
    Installation
-   Tutorial
    Example
    Citation
    Function_Reference
