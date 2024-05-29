@@ -9,7 +9,7 @@ def readme():
 
 setup(
     name='DiSH',
-    version='Latest',
+    version='2.0',
 
     author='Khaled Sayed',
     #author_email='',
